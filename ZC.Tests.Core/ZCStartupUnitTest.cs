@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ZC.Service.AppEnviroment;
 
 namespace ZC.Tests.Core
 {
@@ -15,7 +16,7 @@ namespace ZC.Tests.Core
             hostBuilder
                 .ConfigureHostConfiguration(builder =>
                 {
-
+                    AppEnviromentService.LoadLaunchSettingsIntoEnvVariables("Properties/launchSettings.json");
                 })
                 .ConfigureAppConfiguration((context, builder) =>
                 {
