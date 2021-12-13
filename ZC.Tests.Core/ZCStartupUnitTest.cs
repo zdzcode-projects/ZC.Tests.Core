@@ -11,12 +11,14 @@ namespace ZC.Tests.Core
 {
     public abstract class ZCStartupUnitTest : ZCStartupTestBase
     {
+
+
         public void ConfigureHost(IHostBuilder hostBuilder)
         {
             hostBuilder
                 .ConfigureHostConfiguration(builder =>
                 {
-                    AppEnviromentService.LoadLaunchSettingsIntoEnvVariables("Properties/launchSettings.json");
+                    AppEnviromentService.LoadLaunchSettingsIntoEnvVariables("Properties/launchSettings.json", EnvironmentName);
                 })
                 .ConfigureAppConfiguration((context, builder) =>
                 {

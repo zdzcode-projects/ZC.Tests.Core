@@ -17,7 +17,7 @@ namespace ZC.Tests.Core
         {
             hostBuilder.ConfigureWebHost(webHostBuilder =>
             {
-                AppEnviromentService.LoadLaunchSettingsIntoEnvVariables("Properties/launchSettings.json");
+                AppEnviromentService.LoadLaunchSettingsIntoEnvVariables("Properties/launchSettings.json", EnvironmentName);
 
                 webHostBuilder
                 .UseTestServer()

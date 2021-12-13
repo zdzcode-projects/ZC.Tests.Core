@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.TestHost;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System;
@@ -11,34 +12,24 @@ using System.Threading.Tasks;
 
 namespace ZC.Tests.Core.Tests
 {
-    public class Startup
+    public class Startup : ZCStartupUnitTest
     {
-        public void ConfigureHost(IHostBuilder hostBuilder) =>
-            hostBuilder.ConfigureWebHost(webHostBuilder => webHostBuilder
-           .UseTestServer()
-           .Configure(Configure)
-           .ConfigureTestServices(services =>
-           {
-               services.AddRouting();
-               services.AddControllers();
+        public override string EnvironmentName => Microsoft.Extensions.Hosting.Environments.Staging;
 
-               services.AddTransient<IDependency, DependencyClass>();
-           }));
-
-
-        private void Configure(IApplicationBuilder app)
+        public override void Configure(IApplicationBuilder app)
         {
-            app.UseRouting().UseEndpoints(endpoints =>
-            {
-                endpoints.MapControllers();
 
-            });
         }
 
-        //public void ConfigureServices(IServiceCollection services)
-        //{
-        //    services.AddTransient<IDependency, DependencyClass>();
-        //}
+        public override void ConfigureAppConfiguration(HostBuilderContext hostingContext, IConfigurationBuilder configurationBuilder)
+        {
+
+        }
+
+        public override void ConfigureTestServices(IServiceCollection services)
+        {
+            services.AddTransient<IDependency, DependencyClass>();
+        }
 
     }
 
