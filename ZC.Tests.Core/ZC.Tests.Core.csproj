@@ -1,8 +1,9 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFrameworks>net5.0</TargetFrameworks>
-		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<TargetFrameworks>net6.0;</TargetFrameworks>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
 		<Authors>Zdzislaw Kochanski</Authors>
 		<Company>ZDZCode</Company>
 		<Copyright>ZDZCode</Copyright>
@@ -29,7 +30,7 @@
 
 	<ItemGroup Condition="'$(TargetFramework)' == 'net6.0'">
 		<PackageReference Include="Microsoft.AspNetCore.TestHost">
-			<Version>6.0.3</Version>
+			<Version>6.0.4</Version>
 		</PackageReference>
 	</ItemGroup>
 
