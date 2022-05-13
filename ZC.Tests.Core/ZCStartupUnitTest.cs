@@ -11,8 +11,7 @@ namespace ZC.Tests.Core
 {
     public abstract class ZCStartupUnitTest : ZCStartupTestBase
     {
-
-
+        //https://docs.microsoft.com/pt-br/aspnet/core/test/middleware?view=aspnetcore-6.0
         public void ConfigureHost(IHostBuilder hostBuilder)
         {
             hostBuilder
@@ -35,7 +34,6 @@ namespace ZC.Tests.Core
         }
 
         public abstract void ConfigureAppConfiguration(HostBuilderContext hostingContext, IConfigurationBuilder configurationBuilder);
-
     }
 
 }

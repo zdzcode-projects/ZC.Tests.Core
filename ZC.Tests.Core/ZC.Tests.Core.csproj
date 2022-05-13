@@ -12,6 +12,10 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+	  <None Remove="ZCStartupUnitTest.cs~RF68a3653.TMP" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<PackageReference Include="FluentAssertions" Version="6.2.0" />
 		<PackageReference Include="Xunit.DependencyInjection.Logging" Version="8.0.0" />
 		<PackageReference Include="ZC.Service.AppEnviroment" Version="6.0.0.6035" />

@@ -21,7 +21,8 @@ namespace MainProjectAPI.Tests
         [Fact]
         public async Task Get()
         {
-            IEnumerable<WeatherForecast> result = await _httpClient.GetFromJsonAsync<IEnumerable<WeatherForecast>>("/WeatherForecast");
+            IEnumerable<WeatherForecast> result = 
+                await _httpClient.GetFromJsonAsync<IEnumerable<WeatherForecast>>("/WeatherForecast");
 
             result.Should().HaveCountGreaterThan(0);
         }
