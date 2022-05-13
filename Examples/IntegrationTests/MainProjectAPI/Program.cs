@@ -1,25 +1,23 @@
-var builder = WebApplication.CreateBuilder(args);
+using Microsoft.AspNetCore.Server.Kestrel.Core;
 
-// Add services to the container.
-builder.Services.AddRazorPages();
-
-var app = builder.Build();
-
-// Configure the HTTP request pipeline.
-if (!app.Environment.IsDevelopment())
+namespace MainProjectAPI
 {
-    app.UseExceptionHandler("/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-    app.UseHsts();
+    public class Program
+    {
+        public static async Task Main(string[] args)
+        {
+            await Host.CreateDefaultBuilder(args)
+            .ConfigureWebHostDefaults(webBuilder =>
+            {
+                webBuilder.UseStartup<Startup>();
+                webBuilder.ConfigureKestrel((context, serverOptions) =>
+                {
+                    serverOptions.ConfigureEndpointDefaults(x =>
+                    {
+                        x.Protocols = HttpProtocols.Http1AndHttp2;
+                    });
+                });
+            }).Build().RunAsync();
+        }
+    }
 }
-
-app.UseHttpsRedirection();
-app.UseStaticFiles();
-
-app.UseRouting();
-
-app.UseAuthorization();
-
-app.MapRazorPages();
-
-app.Run();

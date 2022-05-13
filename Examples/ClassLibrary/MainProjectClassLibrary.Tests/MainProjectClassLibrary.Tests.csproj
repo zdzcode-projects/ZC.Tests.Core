@@ -18,7 +18,7 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
-    <PackageReference Include="ZC.Tests.Core" Version="6.0.0.10426" />
+    <PackageReference Include="ZC.Tests.Core" Version="6.0.0.10436" />
   </ItemGroup>
 
   <ItemGroup>

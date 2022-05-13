@@ -13,13 +13,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IntegrationTests", "Integra
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ClassLibraryTests", "ClassLibraryTests", "{7E384A76-FED8-429F-B965-D6345820C0ED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MainProjectClassLibrary", "Examples\ClassLibrary\MainProjectClassLibrary\MainProjectClassLibrary.csproj", "{D6E18D41-2644-4409-934A-CF5B19E97202}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MainProjectClassLibrary", "Examples\ClassLibrary\MainProjectClassLibrary\MainProjectClassLibrary.csproj", "{D6E18D41-2644-4409-934A-CF5B19E97202}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MainProjectClassLibrary.Tests", "Examples\ClassLibrary\MainProjectClassLibrary.Tests\MainProjectClassLibrary.Tests.csproj", "{9E14497B-F568-4D7C-BF08-E16793862A89}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MainProjectClassLibrary.Tests", "Examples\ClassLibrary\MainProjectClassLibrary.Tests\MainProjectClassLibrary.Tests.csproj", "{9E14497B-F568-4D7C-BF08-E16793862A89}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MainProjectAPI", "Examples\IntegrationTests\MainProjectAPI\MainProjectAPI.csproj", "{14922462-CFE3-46AA-922B-D722FC0396D0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MainProjectAPI.Tests", "Examples\IntegrationTests\MainProjectAPI.Tests\MainProjectAPI.Tests.csproj", "{C007AF07-0425-451B-B837-B5D8BDB16873}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MainProjectAPI.Tests", "Examples\IntegrationTests\MainProjectAPI.Tests\MainProjectAPI.Tests.csproj", "{C007AF07-0425-451B-B837-B5D8BDB16873}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MainProjectAPI", "Examples\IntegrationTests\MainProjectAPI\MainProjectAPI.csproj", "{DA69466E-E42A-445A-A1B2-B3A0E0E0F30F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,14 +43,14 @@ Global
 		{9E14497B-F568-4D7C-BF08-E16793862A89}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9E14497B-F568-4D7C-BF08-E16793862A89}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9E14497B-F568-4D7C-BF08-E16793862A89}.Release|Any CPU.Build.0 = Release|Any CPU
-		{14922462-CFE3-46AA-922B-D722FC0396D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{14922462-CFE3-46AA-922B-D722FC0396D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{14922462-CFE3-46AA-922B-D722FC0396D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{14922462-CFE3-46AA-922B-D722FC0396D0}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C007AF07-0425-451B-B837-B5D8BDB16873}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C007AF07-0425-451B-B837-B5D8BDB16873}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C007AF07-0425-451B-B837-B5D8BDB16873}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C007AF07-0425-451B-B837-B5D8BDB16873}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA69466E-E42A-445A-A1B2-B3A0E0E0F30F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA69466E-E42A-445A-A1B2-B3A0E0E0F30F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA69466E-E42A-445A-A1B2-B3A0E0E0F30F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA69466E-E42A-445A-A1B2-B3A0E0E0F30F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -60,8 +60,8 @@ Global
 		{7E384A76-FED8-429F-B965-D6345820C0ED} = {9E7E782C-8AF9-4DC9-9F13-208BE1309FAF}
 		{D6E18D41-2644-4409-934A-CF5B19E97202} = {7E384A76-FED8-429F-B965-D6345820C0ED}
 		{9E14497B-F568-4D7C-BF08-E16793862A89} = {7E384A76-FED8-429F-B965-D6345820C0ED}
-		{14922462-CFE3-46AA-922B-D722FC0396D0} = {BF9D034F-7205-40E1-86A9-3DD04997CB50}
 		{C007AF07-0425-451B-B837-B5D8BDB16873} = {BF9D034F-7205-40E1-86A9-3DD04997CB50}
+		{DA69466E-E42A-445A-A1B2-B3A0E0E0F30F} = {BF9D034F-7205-40E1-86A9-3DD04997CB50}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9D5552AA-B9ED-47CB-A94C-00B238A63C39}
